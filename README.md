@@ -2,10 +2,11 @@
 
 **Author:** M. Reza Ayromlou (ayromlou@uni-bonn.de; ayromlou@gmail.com)
 
-PROFI computes radial profiles of density, velocity, temperature, and metallicity for dark-matter halos in cosmological simulations. It reads particle data and friends-of-friends (FoF) catalogues in HDF5 format and supports both hydrodynamic (gas, dark matter, stars, and black holes) and dark-matter-only (DMO) runs. 
+PROFI computes radial profiles of density, velocity, temperature, and metallicity for dark-matter halos in cosmological simulations. It reads particle data and friends-of-friends (FoF) catalogues in HDF5 format and supports both hydrodynamic (gas, dark matter, stars, and black holes) and dark-matter-only (DMO) runs.
+
+PROFI measures two characteristic radii for each halo: the **Closure Radius**, the halocentric distance within which all baryons associated with the halo are contained ([Ayromlou et al. 2023b](https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.5391A/abstract)), and the **Compensation Radius**, the halocentric distance at which the cumulative total mass of a halo in a hydrodynamic simulation equals its gravity-only counterpart (Ayromlou et al. 2026).
 
 The native input layout is the **AREPO-style HDF5 format** (e.g. Illustris, TNG, iCluster). With minor adjustments to the input, other simulation codes, including **GADGET4**, **GIZMO**, and **SWIFT**, can be easily accomodated. A conversion script is available from the author on request, and will be made publicly available in the near future.
-
 
 If you use the code, please cite Ayromlou et al. 2026.
 
@@ -172,7 +173,7 @@ See [`params/params_template.txt`](params/params_template.txt) for a fully docum
 | `Temp_lim1/2/3`                | double | Gas temperature thresholds (K)                                          |
 | `temp_starForming_gas_cell`    | double | Effective temperature for star-forming gas cells (K)                    |
 | `v_rad_lim1/2/3`               | double | Radial velocity thresholds (km/s)                                       |
-| `n_metals`                     | int    | Number of metal species in `GFM_Metals` (10 for TNG/EAGLE, 11 for SIMBA) |
+| `n_metals`                     | int    | Number of metal species in`GFM_Metals` (10 for TNG/EAGLE, 11 for SIMBA) |
 | `projection_flag`              | int    | 0 = 3-D spherical, 1 = 2-D projected                                    |
 | `is_hydro_sim`                 | int    | 1 = hydro, 0 = DMO                                                      |
 | `calculate_all_gas_properties` | int    | 1 = compute temperature/X-ray/metallicity, 0 = skip                     |
@@ -187,7 +188,7 @@ See [`params/params_template.txt`](params/params_template.txt) for a fully docum
 | `cosmo_Omega_m`          | 0.3089  | Total matter density                                                                |
 | `cosmo_Omega_b`          | 0.0486  | Baryon density                                                                      |
 | `cosmo_Omega_Lambda`     | 0.6911  | Dark energy density                                                                 |
-| `output_*` flags         | 1       | Granular output control; see `params/params_template.txt` for the full list         |
+| `output_*` flags         | 1       | Granular output control; see`params/params_template.txt` for the full list          |
 | `part_in_profile_method` | 0       | Particle selection mode (see command-line table; modes 1 and 2 are not implemented) |
 | `cluster_subfile_mode`   | 0       | Set to 1 only for TNG-Cluster-like catalogues                                       |
 
