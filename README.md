@@ -4,11 +4,11 @@
 
 PROFI computes radial profiles of density, velocity, temperature, and metallicity for dark-matter halos in cosmological simulations. It reads particle data and friends-of-friends (FoF) catalogues in HDF5 format and supports both hydrodynamic (gas, dark matter, stars, and black holes) and dark-matter-only (DMO) runs.
 
-PROFI measures two characteristic radii for each halo: the **Closure Radius**, the halocentric distance within which all baryons associated with the halo are contained ([Ayromlou et al. 2023b](https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.5391A/abstract)), and the **Compensation Radius**, the halocentric distance at which the cumulative total mass of a halo in a hydrodynamic simulation equals its gravity-only counterpart (Ayromlou et al. 2026).
+PROFI measures two characteristic radii for each halo: the **Closure Radius**, the halocentric distance within which all baryons associated with the halo are contained ([Ayromlou et al. 2023b](https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.5391A/abstract)), and the **Compensation Radius**, the halocentric distance at which the cumulative total mass of a halo in a hydrodynamic simulation equals its gravity-only counterpart ([Ayromlou et al. 2026](https://ui.adsabs.harvard.edu/abs/2026arXiv261007140A/abstract)).
 
 The native input layout is the **AREPO-style HDF5 format** (e.g. Illustris, TNG, iCluster). With minor adjustments to the input, other simulation codes, including **GADGET4**, **GIZMO**, and **SWIFT**, can be easily accomodated. A conversion script is available from the author on request, and will be made publicly available in the near future.
 
-If you use the code, please cite Ayromlou et al. 2026.
+If you use the code, please cite ([Ayromlou et al. 2026](https://ui.adsabs.harvard.edu/abs/2026arXiv261007140A/abstract)).
 
 ---
 
